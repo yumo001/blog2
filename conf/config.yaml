@@ -1,0 +1,11 @@
+serverName: blog_ser
+
+nacosConfig:
+  ServerConfig:
+    IpAddr: 43.143.123.142
+    Port: 8848
+  ClientConfig:
+    NamespaceId: b2617e0b-4e3c-415c-9ea0-794fb9ce0386
+  ConfigParam:
+    DataId: blog
+    Group: zg5

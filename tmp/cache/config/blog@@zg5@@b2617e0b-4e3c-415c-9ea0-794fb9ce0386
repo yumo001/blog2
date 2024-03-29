@@ -1,0 +1,23 @@
+rpc_port: 8081
+
+mysql:
+  root: root
+  password: q025l6263
+  host: 43.143.123.142
+  port: 3306
+  database: blog
+
+elastic:
+  host: 43.143.123.142
+  port: 9200
+
+JwtSigningKey: GanBei
+
+consul: 
+  host: 10.2.176.126
+  port: 8500
+
+redis:
+  addr: 43.143.123.142
+  password: 
+  db: 4

@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package users;
+option go_package=".";
+
+message Request {
+  string ping = 1;
+}
+
+message Response {
+  string pong = 1;
+}
+
+message User {
+  int64 id = 1;
+  string username = 2;
+  string password = 3;
+  string email = 4;
+  string phone = 5;
+}
+
+message RegisterRequest {
+  User user = 1;
+}
+message RegisterResponse {
+}
+
+message LoginRequest {
+  User user = 1;
+}
+message LoginResponse {
+}
+message ListRequest{
+  User user = 1;
+}
+message ListResponse{
+  repeated User users = 1;
+}
+
+service Users {
+  rpc Ping(Request) returns(Response);
+
+  rpc Register(RegisterRequest) returns(RegisterResponse);
+  rpc Login(LoginRequest) returns(LoginResponse);
+  rpc List(ListRequest) returns(ListResponse);
+}

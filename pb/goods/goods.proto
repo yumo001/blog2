@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package goods;
+option go_package=".";
+
+message Good {
+  int64 id = 1;
+  string name = 2;
+  float price = 3;
+  int64 num = 4;
+  string img = 5;
+  string type = 6;
+  int64 sales = 7; //销量
+
+}
+message GoodsAddRequest {
+  string Good = 1;
+}
+
+message GoodsAddResponse {
+}
+
+message GoodsListRequest {
+  Good goods =1;
+}
+
+message GoodsListResponse {
+  repeated Good goods = 1;
+}
+
+
+service Goods {
+  rpc GoodsAdd(GoodsAddRequest) returns(GoodsAddResponse);
+  rpc GoodsList(GoodsListRequest) returns(GoodsListResponse);
+}
+
